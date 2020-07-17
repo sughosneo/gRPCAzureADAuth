@@ -1,0 +1,28 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Contracts.Lib";
+
+import "google/protobuf/empty.proto";
+
+package product.service;
+
+// Service to fetch list of products by Id
+service ProductSvc {  
+  rpc GetAllProducts (google.protobuf.Empty) returns (ProductListMsg);
+  rpc GetAllProductsById (ProductIdMsg) returns (ProductListMsg);
+}
+
+// Wrapping up a Product Id with request message 
+message	ProductIdMsg {
+	int32 id = 1;
+}
+
+message ProductMsg {
+  int32 id = 1;
+  string name = 2;
+  double price = 3;
+}
+
+message ProductListMsg {
+  repeated ProductMsg productmsgs = 1;
+}
