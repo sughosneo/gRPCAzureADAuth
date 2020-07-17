@@ -24,7 +24,7 @@ namespace ProductSvc.Consumable.Client
 
                 Console.WriteLine("ProductSvc.Consumable.Client:: Fecthing all product details ...");
 
-                var allProductResult = await GetAllProductDetailsAsync(productGrpcAPIUrl, accessToken);
+                var allProductResult = await GetAllProductDetailsAsync(productGrpcAPIUrl, accessToken);                
                 Console.WriteLine(allProductResult);
 
                 Console.WriteLine("ProductSvc.Consumable.Client:: Fecthing specific product details ...");

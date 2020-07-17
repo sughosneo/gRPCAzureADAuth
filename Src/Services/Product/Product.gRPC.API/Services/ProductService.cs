@@ -43,9 +43,7 @@ namespace Product.gRPC.API.Services
                 foreach (var item in listOfProducts)
                 {
                     filteredProduct.Add(new ProductMsg() { Id = item.Id, Name = item.Name, Price = item.Price });
-                }
-
-                // https://stackoverflow.com/questions/59299158/initialize-google-protobuf-repeatedfield-collections
+                }                
 
                 var productListMsgs = new ProductListMsg();
                 productListMsgs.Productmsgs.Add(filteredProduct);
